@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SRC/STYLES/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Clima Atual</title>
+</head>
+<body>
+    <div id="container">
+        <img src="SRC/IMAGES/uninterpequeno.jpg" alt="Imagem do clima" id="top-image">
+        <form id="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="search" name="city_name" id="city_name" placeholder="Digite a cidade">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div id="weather">
+            <h1 id="title"></h1>
+            
+            <!-- Novo contêiner para agrupar temp e other_infos -->
+            <div id="forecast-container">
+                <div id="temp">
+                    <img id="temp_img" src="" alt="">
+                    <div>
+                        <p id="temp_value"><sup>°C</sup></p>
+                        <p id="temp_description"></p>
+                    </div>
+                </div>
+
+                <div id="other_infos">
+                    <!-- Outros itens de informações, como temp.max, temp.min, etc. -->
+                    
+                    <!-- Forecast Items do Dia Atual -->
+                    <div id="current-day-forecast">
+                        <h3>Previsão para Hoje</h3>
+                        <div id="forecast">
+                            <!-- Os items de previsão do dia atual serão inseridos aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <a href="forecast.html" class="forecast-link">Ver Previsão para 5 Dias</a>
+        <a href="https://alertas2.inmet.gov.br/" class="alert-link" target="_blank">
+            Ver Alertas do INMET
+        </a>
+
+        <div id="alert"></div>
+    </div>
+    <script src="SRC/JAVASCRIPT/script.js"></script>
+</body>
+</html>
